@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
 import './styles.css';
 import { NavBar } from '../NavBar';
+import { Footer } from '../Footer';
 
-type Props = {
-  children?: ReactNode
-};
+interface IProps {
+  children?: ReactNode;
+}
 
-export const PageLayout: React.FC<Props> = ({children}) => {
-
+export const PageLayout: React.FC<IProps> = ({ children }) => {
   return (
     <div className='site-container'>
       <header>
@@ -15,12 +15,12 @@ export const PageLayout: React.FC<Props> = ({children}) => {
       </header>
 
       <main>
-        <div className="site-content">{children}</div>
+        <div className='site-content'>{children}</div>
       </main>
 
       <footer>
-        footer
+        <Footer />
       </footer>
-      </>
+    </div>
   );
 };

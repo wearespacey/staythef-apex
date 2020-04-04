@@ -11,14 +11,20 @@ export const Login = () => {
       <div>
         <ul>
           <li>
-            <Button>Consommateur</Button>
+            <Link to='/consumer'>
+              <Button>Consumer</Button>
+            </Link>
           </li>
+
           <li>
-            <Button>Producteur</Button>
+            <Link to='/producer'>
+              <Button>Producer</Button>
+            </Link>
           </li>
+          
           <li>
             <Link to='/contributor'>
-              <Button>Contributeur</Button>
+              <Button>Contributor</Button>
             </Link>
           </li>
         </ul>

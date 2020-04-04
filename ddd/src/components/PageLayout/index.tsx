@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import './styles.css';
-import { Navbar } from 'react-bootstrap';
+import { NavBar } from '../NavBar';
 
 type Props = {
   children?: ReactNode
@@ -11,9 +11,7 @@ export const PageLayout: React.FC<Props> = ({children}) => {
   return (
     <>
       <header>
-        <Navbar>
-          header
-        </Navbar>
+        <NavBar />
       </header>
 
       <main>{children}</main>
@@ -21,6 +19,6 @@ export const PageLayout: React.FC<Props> = ({children}) => {
       <footer>
         footer
       </footer>
-    </>
+      </>
   );
 };

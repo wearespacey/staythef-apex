@@ -13,6 +13,7 @@ function App() {
           <Route exact path='/'>
             <Login />
           </Route>
+
           <Route path='/contributor'>
             <PageLayout>
               <span>it works!</span>

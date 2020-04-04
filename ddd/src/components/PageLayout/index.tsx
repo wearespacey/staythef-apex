@@ -1,21 +1,26 @@
 import React, { ReactNode } from 'react';
 import './styles.css';
+import { Navbar } from 'react-bootstrap';
 
 type Props = {
-  children: ReactNode
+  children?: ReactNode
 };
 
 export const PageLayout: React.FC<Props> = ({children}) => {
 
   return (
     <>
-      <header>header</header>
+      <header>
+        <Navbar>
+          header
+        </Navbar>
+      </header>
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
-      <footer>footer</footer>
+      <footer>
+        footer
+      </footer>
     </>
   );
 };

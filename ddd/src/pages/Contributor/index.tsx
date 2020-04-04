@@ -1,115 +1,43 @@
 import React, { useState } from 'react';
-import { CardDeck } from 'react-bootstrap';
+import { CardDeck, Container } from 'react-bootstrap';
 import { IThreeModel } from '../../models/IThreeModel';
 import { ProducerCard } from '../../components/ProducerCard';
+import { ThreeDModelAddForm } from '../../components/ThreeDModelAddForm';
 
-let initialValues: IThreeModel[] = [
-  {
-    id: '123',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1213',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-  {
-    id: '1223',
-    imageUrl:
-      'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
-    title: 'First model',
-    description: 'Nice model bro',
-    dimensions: '15 cm x 25cm x 53 cm',
-    gcodeUrl: '',
-  },
-];
+let INITIAL_3DMODEL: IThreeModel = {
+  id: '123',
+  imageUrl:
+    'https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png',
+  title: 'First model',
+  description: 'Nice model bro',
+  dimensions: '15x25x53 cm',
+  gcodeUrl: '',
+};
 
 export const Contributor = () => {
-  const [models, setModels] = useState<IThreeModel[]>(initialValues);
+  const [models, setModels] = useState<IThreeModel[]>([
+    INITIAL_3DMODEL,
+    INITIAL_3DMODEL,
+    INITIAL_3DMODEL,
+  ]);
 
   return (
-    <CardDeck className='m-5'>
-      {models.map((model, index) => (
-        <ProducerCard
-          width={200}
-          height={425}
-          key={index}
-          producer={model}
-          onClick={() => console.log('You clicked on an item!')}
-        />
-      ))}
-    </CardDeck>
+    <div>
+      <Container>
+        <ThreeDModelAddForm />
+      </Container>
+
+      <CardDeck className='m-4'>
+        {models.map((model, index) => (
+          <ProducerCard
+            width={300}
+            height={500}
+            key={index}
+            producer={model}
+            onClick={() => console.log('You clicked on an item!')}
+          />
+        ))}
+      </CardDeck>
+    </div>
   );
 };

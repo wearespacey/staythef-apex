@@ -17,10 +17,10 @@ export const ProducerCard: React.FC<IProps> = ({ producer, onClick, width, heigh
       <Card.Img variant='top' src={cubeAvatar} />
       <Card.Body>
         <div>
-          <b>{producer.title}</b>
+          <b>{producer.title.toUpperCase()}</b>
         </div>
-        <div>Description : {producer.description}</div>
-        <div>Dimensions : {producer.dimensions}</div>
+        <div>Description: {producer.description}</div>
+        <div>Dimensions: {producer.dimensions}</div>
       </Card.Body>
       <Button onClick={onClick}>Click</Button>
     </EntityCard>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ListModels } from "../../components/PrinterModelLayout/PrinterModels";
 import { IPrinterModel } from "../../models/IPrinterModel";
 import { Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { PrinterAddForms } from "../../components/PrinterModelLayout/PrinterAddForms";
 
 // Page of creator (tab) displays creations
 let initialValues: IPrinterModel[] = [
@@ -31,6 +33,7 @@ export const Producer = () => {
       <Button variant="primary" size="lg" block>
         Ajouter une imprimante 3d
       </Button>
+      <PrinterAddForms></PrinterAddForms>
     </div>
     );
 };

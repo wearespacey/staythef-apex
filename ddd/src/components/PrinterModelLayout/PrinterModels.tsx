@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image, ListGroup,CardDeck,Card } from "react-bootstrap";
+import { CardDeck,Card } from "react-bootstrap";
 import { IPrinterModel } from "../../models/IPrinterModel";
 import printer from "../../assets/printer3d.png";
 

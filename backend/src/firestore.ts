@@ -12,6 +12,6 @@ export class Firestore {
       ),
       databaseURL: 'https://ddd-3ddd.firebaseio.com',
     });
-    this.db = new admin.firestore.Firestore();
+    this.db = admin.firestore();
   }
 }

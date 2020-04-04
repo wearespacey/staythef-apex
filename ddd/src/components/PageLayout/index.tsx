@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import './styles.css';
-import { Navbar } from 'react-bootstrap';
+import { NavBar } from '../NavBar';
 
 type Props = {
   children?: ReactNode
@@ -11,14 +11,16 @@ export const PageLayout: React.FC<Props> = ({children}) => {
   return (
     <div className='site-container'>
       <header>
-        <Navbar>header</Navbar>
+        <NavBar />
       </header>
 
       <main>
         <div className="site-content">{children}</div>
       </main>
 
-      <footer>footer</footer>
-    </div>
+      <footer>
+        footer
+      </footer>
+      </>
   );
 };

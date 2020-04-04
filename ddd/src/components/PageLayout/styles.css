@@ -1,0 +1,20 @@
+header {}
+
+main {
+  flex: 1;
+}
+
+footer {}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}

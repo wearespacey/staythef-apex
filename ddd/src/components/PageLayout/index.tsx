@@ -9,18 +9,16 @@ type Props = {
 export const PageLayout: React.FC<Props> = ({children}) => {
 
   return (
-    <>
+    <div className='site-container'>
       <header>
-        <Navbar>
-          header
-        </Navbar>
+        <Navbar>header</Navbar>
       </header>
 
-      <main>{children}</main>
+      <main>
+        <div className="site-content">{children}</div>
+      </main>
 
-      <footer>
-        footer
-      </footer>
-    </>
+      <footer>footer</footer>
+    </div>
   );
 };

@@ -35,7 +35,7 @@ export const Producer = () => {
         {models.map((model, index) => (
           <PrinterCard
             width={300}
-            height={400}
+            height={450}
             key={index}
             printer={model}
             onClick={() => console.log("You clicked on an item!")}

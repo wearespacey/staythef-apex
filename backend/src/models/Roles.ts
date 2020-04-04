@@ -1,5 +1,4 @@
-export enum Role{
-    CREATOR = 1,
-    PRINTER,
-    CUSTOMER
+export interface Role {
+  id: String;
+  name: String;
 }

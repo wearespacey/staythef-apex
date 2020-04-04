@@ -17,7 +17,7 @@ export const ListModels: React.FC<IProps> = ({ models }) => {
               <Image src={printer} width="100px" style={{ float: "right" }} />
             </Col>
             <Col>
-              <Container fluid style={{ height: "100px", textAlign: "left" }}>
+              <Container fluid style={{ minHeight: "100px", textAlign: "left" }}>
                 <div>
                   <b>{model.title}</b>
                 </div>

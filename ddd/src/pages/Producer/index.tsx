@@ -8,20 +8,33 @@ import { PrinterAddForms } from "../../components/PrinterModelLayout/PrinterAddF
 // Page of creator (tab) displays creations
 let initialValues: IPrinterModel[] = [
   {
-    id: "123",
-    details:
-      "MARQUE 3D PRINTER",
-  },  
-  {
-    id: "124",
-    details:
-      "MARQUE 3D PRINTER",
+    id: '123',
+    details: 'MARQUE 3D PRINTER',
   },
   {
-    id: "125",
-    details:
-      "MARQUE 3D PRINTER",
+    id: '124',
+    details: 'MARQUE 3D PRINTER',
   },
+  {
+    id: '125',
+    details: 'MARQUE 3D PRINTER',
+  },
+  {
+    id: '125',
+    details: 'MARQUE 3D PRINTER',
+  },
+  {
+    id: '125',
+    details: 'MARQUE 3D PRINTER',
+  },
+  {
+    id: '125',
+    details: 'MARQUE 3D PRINTER',
+  },
+  {
+    id: '125',
+    details: 'MARQUE 3D PRINTER',
+  }
 ];
 
 export const Producer = () => {

@@ -1,51 +1,25 @@
-import React, { useState } from "react";
-import { CardDeck, Container, Accordion, Button } from "react-bootstrap";
-import { IThreeModel } from "../../models/IThreeModel";
-import { ProducerCard } from "../../components/ProducerCard";
-import { ThreeDModelAddForm } from "../../components/ThreeDModelAddForm";
+import React from 'react';
+import { Container, Accordion, Button } from 'react-bootstrap';
 
-let INITIAL_3DMODEL: IThreeModel = {
-  id: "123",
-  imageUrl:
-    "https://cdn.icon-icons.com/icons2/510/PNG/512/printer_icon-icons.com_50058.png",
-  title: "First model",
-  description: "Nice model bro",
-  dimensions: "15x25x53 cm",
-  gcodeUrl: "",
-};
+import { ThreeDModelForm } from '../../components/ThreeDModelForm';
+import { ThreeDModelCards } from '../../containers/ThreeDModelCards';
 
 export const Contributor = () => {
-  const [models, setModels] = useState<IThreeModel[]>([
-    INITIAL_3DMODEL,
-    INITIAL_3DMODEL,
-    INITIAL_3DMODEL,
-  ]);
-
   return (
     <div>
       <Accordion>
-        <Accordion.Toggle as={Button} eventKey="0">
+        <Accordion.Toggle as={Button} eventKey='0'>
           Toggle form
         </Accordion.Toggle>
-        <Accordion.Collapse eventKey="0">
+        <Accordion.Collapse eventKey='0'>
           <Container>
-            <ThreeDModelAddForm />
+            <h2 className='title'>3D Model Form</h2>
+            <ThreeDModelForm />
           </Container>
         </Accordion.Collapse>
       </Accordion>
 
-      <CardDeck className="m-4">
-        {models.map((model, index) => (
-          <ProducerCard
-            width={300}
-            height={485}
-            key={index}
-            producer={model}
-            onClick={() => console.log("You clicked on an item!")}
-            contentButton="Click !"
-          />
-        ))}
-      </CardDeck>
+      <ThreeDModelCards />
     </div>
   );
 };

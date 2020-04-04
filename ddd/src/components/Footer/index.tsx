@@ -10,7 +10,15 @@ export const Footer = () => {
       sticky='top'
     >
       <Navbar.Text>
-        &copy; Copyright <a href="https://github.com/wearespacey" target="_blank">SpaceY</a> 2020.
+        &copy; Copyright{' '}
+        <a
+          href='https://github.com/wearespacey'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          SpaceY
+        </a>{' '}
+        2020.
       </Navbar.Text>
     </Navbar>
   );

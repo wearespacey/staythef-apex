@@ -1,48 +1,25 @@
-import React, { useState } from "react";
-import { Container, CardDeck, Button, Accordion } from "react-bootstrap";
+import React from 'react';
+import { Container, Button, Accordion } from 'react-bootstrap';
 
-import { IPrinterModel } from "../../models/IPrinterModel";
-import { PrinterAddForms } from "../../components/PrinterAddForms";
-import { PrinterCard } from "../../components/PrinterCard";
-
-let INTIIAL_VALUE: IPrinterModel = {
-  id: "123",
-  details: "Marque Imprimante 3D",
-};
+import { PrinterModelForm } from '../../components/PrinterModelForm';
+import { PrinterCards } from '../../containers/PrinterCards';
 
 export const Producer = () => {
-  const [models, setModels] = useState<IPrinterModel[]>([
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-  ]);
-
   return (
     <div>
       <Accordion>
-        <Accordion.Toggle as={Button} eventKey="0">
+        <Accordion.Toggle as={Button} eventKey='0'>
           Toggle form
         </Accordion.Toggle>
-        <Accordion.Collapse eventKey="0">
+        <Accordion.Collapse eventKey='0'>
           <Container>
-            <PrinterAddForms />
+            <h2 className='title'>Printer Form</h2>
+            <PrinterModelForm />
           </Container>
         </Accordion.Collapse>
       </Accordion>
 
-      <CardDeck className="m-4">
-        {models.map((model, index) => (
-          <PrinterCard
-            width={300}
-            height={450}
-            key={index}
-            printer={model}
-            onClick={() => console.log("You clicked on an item!")}
-            contentButton="Click !"
-          />
-        ))}
-      </CardDeck>
+      <PrinterCards />
     </div>
   );
 };

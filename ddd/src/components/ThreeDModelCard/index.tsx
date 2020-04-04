@@ -12,7 +12,7 @@ interface IProps {
   contentButton: string;
 }
 
-export const ProducerCard: React.FC<IProps> = ({ producer, onClick, contentButton, width, height }) => {
+export const ThreeDModelCard: React.FC<IProps> = ({ producer, onClick, contentButton, width, height }) => {
   return (
     <EntityCard width={width} height={height}>
       <Card.Img variant='top' src={cubeAvatar} />

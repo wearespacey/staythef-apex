@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { FirestoreModule } from './firestore/firestore.module';
+import { Firestore } from './firestore';
 
 @Module({
-  imports: [FirestoreModule],
+  providers: [Firestore],
 })
 export class AppModule {}

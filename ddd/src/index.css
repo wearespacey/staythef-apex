@@ -18,3 +18,8 @@ code {
       rgb(169, 0, 221) 90%) !important;
   min-height: 100vh;
 }
+
+.title {
+  color: white;
+  font-weight: bold;
+}

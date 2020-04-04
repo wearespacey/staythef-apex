@@ -16,7 +16,7 @@ export const PrinterCard: React.FC<IProps> = ({ printer, width, height }) => {
         <Card.Img variant='top' src={printerAvatar} />
         <Card.Body>
           <Card.Title>{printer.id}</Card.Title>
-          <Card.Text>{printer.details}</Card.Text>
+          <Card.Text>{printer.details.toUpperCase()}</Card.Text>
         </Card.Body>
       </EntityCard>
   );

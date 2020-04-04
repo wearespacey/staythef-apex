@@ -6,7 +6,7 @@ import './styles.css';
 export const Login = () => {
   return (
     <Container fluid>
-      <span className='title'>Stay the fuck Apex</span>
+      <h2 className="title">Stay the fuck Apex</h2>
 
       <div>
         <ul>

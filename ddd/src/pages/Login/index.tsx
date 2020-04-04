@@ -14,7 +14,9 @@ export const Login = () => {
             <Button>Consommateur</Button>
           </li>
           <li>
-            <Button>Producteur</Button>
+            <Link to='/producer'>
+              <Button>Producteur</Button>
+            </Link>
           </li>
           <li>
             <Link to='/contributor'>

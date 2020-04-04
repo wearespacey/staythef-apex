@@ -4,6 +4,7 @@ import { Login } from "../Login";
 
 import "./styles.css";
 import { PageLayout } from '../../components/PageLayout';
+import { Producer } from "../Producer";
 
 function App() {
   return (
@@ -12,6 +13,12 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Login />
+          </Route>
+          
+          <Route path='/producer'>
+            <PageLayout>
+              <Producer></Producer>
+            </PageLayout>
           </Route>
 
           <Route path='/contributor'>

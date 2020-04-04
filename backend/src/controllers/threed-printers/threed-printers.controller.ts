@@ -6,7 +6,7 @@ export class ThreedPrintersController {
     constructor(private service:ThreedPrintersService){}
 
     @Get()
-    async getAll3DPrinters(){
-        return await this.service.getAll3DPrinters();
+    getAll3DPrinters(){
+        return this.service.getAll3DPrinters();
     }
 }

@@ -6,7 +6,7 @@ export class ThreedModelsController {
     constructor(private service:ThreedModelsService){}
 
     @Get()
-    async getAll3DModels(){
-        return await this.service.getAll3DModels();
+    getAll3DModels(){
+        return this.service.getAll3DModels();
     }
 }

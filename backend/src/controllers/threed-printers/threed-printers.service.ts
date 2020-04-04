@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Firestore } from 'src/shared/firestore';
 import * as admin from 'firebase-admin';
+import { ThreeDPrinter } from 'src/models/3DPrinter';
 
 @Injectable()
 export class ThreedPrintersService {
@@ -11,11 +12,11 @@ export class ThreedPrintersService {
     this.printersRef = firestore.db.collection('3dprinters')
   }
 
-  async getAll3DPrinters(){
+  async getAll3DPrinters():Promise<Array<ThreeDPrinter>>{
     var printers = new Array();
 
     const snapshots = await this.printersRef.get();
-    snapshots.forEach(snapshot => printers.push(snapshot.data()));
+    snapshots.forEach(snapshot => printers.push({id:snapshot.id, ...snapshot.data()}));
     
     return printers;
   }

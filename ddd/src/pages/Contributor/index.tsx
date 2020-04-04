@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CardDeck, Container } from 'react-bootstrap';
+import { CardDeck, Container, Accordion, Button } from 'react-bootstrap';
 import { IThreeModel } from '../../models/IThreeModel';
 import { ProducerCard } from '../../components/ProducerCard';
 import { ThreeDModelAddForm } from '../../components/ThreeDModelAddForm';
@@ -23,9 +23,16 @@ export const Contributor = () => {
 
   return (
     <div>
-      <Container>
-        <ThreeDModelAddForm />
-      </Container>
+      <Accordion>
+        <Accordion.Toggle as={Button} eventKey='0'>
+          Toggle form
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey='0'>
+          <Container>
+            <ThreeDModelAddForm />
+          </Container>
+        </Accordion.Collapse>
+      </Accordion>
 
       <CardDeck className='m-4'>
         {models.map((model, index) => (

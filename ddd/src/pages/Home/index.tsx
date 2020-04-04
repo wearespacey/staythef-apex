@@ -5,13 +5,16 @@ import "./styles.css";
 export const Home = () => {
   return (
     <div className="background">
-      <title as="h1">DDD</title>
       <Container fluid>
-        <Button variant="warning" onClick={() => console.log("Consommateur")}>
+        <span className="title">Stay the fuck Apex</span>
+        
+        <Button onClick={() => console.log("Consommateur")}>
           Consommateur
         </Button>
-        <Button variant="warning" onClick={() => console.log("Producteur")}>Producteur</Button>
-        <Button variant="warning" onClick={() => console.log("Contributeur")}>
+        <Button onClick={() => console.log("Producteur")}>
+          Producteur
+        </Button>
+        <Button onClick={() => console.log("Contributeur")}>
           Contributeur
         </Button>
       </Container>

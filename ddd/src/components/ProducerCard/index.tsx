@@ -9,9 +9,10 @@ interface IProps {
   onClick: () => void;
   width: number;
   height: number;
+  contentButton: string;
 }
 
-export const ProducerCard: React.FC<IProps> = ({ producer, onClick, width, height }) => {
+export const ProducerCard: React.FC<IProps> = ({ producer, onClick, contentButton, width, height }) => {
   return (
     <EntityCard width={width} height={height}>
       <Card.Img variant='top' src={cubeAvatar} />
@@ -22,7 +23,7 @@ export const ProducerCard: React.FC<IProps> = ({ producer, onClick, width, heigh
         <div>Description : {producer.description}</div>
         <div>Dimensions : {producer.dimensions}</div>
       </Card.Body>
-      <Button onClick={onClick}>Click</Button>
+      <Button onClick={onClick}>{contentButton}</Button>
     </EntityCard>
   );
 };

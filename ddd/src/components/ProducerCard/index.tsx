@@ -1,26 +1,28 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { IThreeModel } from '../../models/IThreeModel';
-import printerAvatar from '../../assets/printer3d.png';
+import cubeAvatar from '../../assets/cube3d.png';
+import { EntityCard } from '../EntityCard';
 
 interface IProps {
-  producer: IThreeModel,
-  onClick: () => void
+  producer: IThreeModel;
+  onClick: () => void;
+  width: number;
+  height: number;
 }
 
-export const ProducerCard: React.FC<IProps> = ({ producer, onClick}) => {
-
+export const ProducerCard: React.FC<IProps> = ({ producer, onClick, width, height }) => {
   return (
-    <Card>
-      <Card.Img variant='top' src={printerAvatar} />
+    <EntityCard width={width} height={height}>
+      <Card.Img variant='top' src={cubeAvatar} />
       <Card.Body>
         <div>
           <b>{producer.title}</b>
         </div>
-          <div>Description : {producer.description}</div>
-          <div>Dimensions : {producer.dimensions}</div>
+        <div>Description : {producer.description}</div>
+        <div>Dimensions : {producer.dimensions}</div>
       </Card.Body>
       <Button onClick={onClick}>Click</Button>
-    </Card>
+    </EntityCard>
   );
-}
+};

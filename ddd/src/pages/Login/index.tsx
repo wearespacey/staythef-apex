@@ -12,19 +12,19 @@ export const Login = () => {
         <ul>
           <li>
             <Link to='/consumer'>
-              <Button>Consumer</Button>
+              <Button className="menuButton">Consumer</Button>
             </Link>
           </li>
 
           <li>
             <Link to='/producer'>
-              <Button>Producer</Button>
+              <Button className="menuButton">Producer</Button>
             </Link>
           </li>
-          
+
           <li>
             <Link to='/contributor'>
-              <Button>Contributor</Button>
+              <Button className="menuButton">Contributor</Button>
             </Link>
           </li>
         </ul>

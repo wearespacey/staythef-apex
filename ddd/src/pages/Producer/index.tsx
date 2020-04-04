@@ -1,118 +1,118 @@
-import React, { useState } from 'react';
-import { Container, CardDeck } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, CardDeck } from "react-bootstrap";
 
-import { IPrinterModel } from '../../models/IPrinterModel';
-import { PrinterAddForms } from '../../components/PrinterAddForms';
-import { PrinterCard } from '../../components/PrinterCard';
+import { IPrinterModel } from "../../models/IPrinterModel";
+import { PrinterAddForms } from "../../components/PrinterAddForms";
+import { PrinterCard } from "../../components/PrinterCard";
 
 let initialValues: IPrinterModel[] = [
   {
-    id: '123',
-    details: 'MARQUE 3D PRINTER',
+    id: "123",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '124',
-    details: 'MARQUE 3D PRINTER',
+    id: "124",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
   {
-    id: '125',
-    details: 'MARQUE 3D PRINTER',
+    id: "125",
+    details: "MARQUE 3D PRINTER",
   },
 ];
 
@@ -124,9 +124,16 @@ export const Producer = () => {
       <Container>
         <PrinterAddForms />
       </Container>
-      <CardDeck className='m-5'>
+      <CardDeck className="m-5">
         {models.map((model, index) => (
-          <PrinterCard width={300} height={400} key={index} printer={model} />
+          <PrinterCard
+            width={300}
+            height={400}
+            key={index}
+            printer={model}
+            onClick={() => console.log("You clicked on an item!")}
+            contentButton="Click !"
+          />
         ))}
       </CardDeck>
     </div>

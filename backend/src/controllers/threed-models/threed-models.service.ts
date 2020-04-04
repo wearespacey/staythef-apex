@@ -1,11 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Firestore } from 'src/firestore';
+import { Firestore } from 'src/shared/firestore';
 
 @Injectable()
 export class ThreedModelsService {
-  constructor(private fire: Firestore) {}
-
-  getAll3DModels() {
-    this.fire.db.collection('threedmodels').get();
-  }
+  constructor() {}
 }

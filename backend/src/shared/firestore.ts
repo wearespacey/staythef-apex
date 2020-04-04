@@ -8,7 +8,7 @@ export class Firestore {
   constructor() {
     admin.initializeApp({
       credential: admin.credential.cert(
-        require('../firestore_credentials.json'),
+        require('../../firestore_credentials.json'),
       ),
       databaseURL: 'https://ddd-3ddd.firebaseio.com',
     });

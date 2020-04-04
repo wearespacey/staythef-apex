@@ -6,23 +6,29 @@ import * as admin from 'firebase-admin';
 export class Firestore {
   db: admin.firestore.Firestore;
 
-  params = {
-    type: process.env['Values.type'],
-    project_id: process.env['Values.project_id'],
-    private_key_id: process.env['Values.private_key_id'],
-    private_key: process.env['Values.private_key'],
-    client_email: process.env['Values.client_email'],
-    client_id: process.env['Values.client_id'],
-    auth_uri: process.env['Values.auth_uri'],
-    token_uri: process.env['Values.token_uri'],
-    auth_provider_x509_cert_url:
-      process.env['Values.auth_provider_x509_cert_url'],
-    clientX509_cert_Url: process.env['Values.client_x509_cert_url'],
-  };
-
   constructor() {
+    console.log(
+      'processenvdfgszgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      process.env.project_id,
+    );
+
+    let params: admin.ServiceAccount = {
+      //type: process.env['Values.type'],
+      projectId: process.env.project_id,
+      //private_key_id: process.env['Values.private_key_id'],
+      privateKey: process.env.private_key,
+      clientEmail: process.env.client_email,
+      //clientId: process.env['Values.client_id'],
+      //auth_uri: process.env['Values.auth_uri'],
+      //token_uri: process.env['Values.token_uri'],
+      //auth_provider_x509_cert_url:
+      //  process.env['Values.auth_provider_x509_cert_url'],
+      //client_X509_cert_Url: process.env['Values.client_x509_cert_url'],
+    };
+
     admin.initializeApp({
-      credential: admin.credential.cert(this.params),
+      credential: admin.credential.cert(params),
+      databaseURL: 'https://ddd-3ddd.firebaseio.com',
     });
     this.db = admin.firestore();
   }

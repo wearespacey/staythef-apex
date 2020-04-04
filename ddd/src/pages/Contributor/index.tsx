@@ -42,6 +42,7 @@ export const Contributor = () => {
             key={index}
             producer={model}
             onClick={() => console.log('You clicked on an item!')}
+            contentButton="Click !"
           />
         ))}
       </CardDeck>

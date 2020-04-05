@@ -1,12 +1,18 @@
-import { Controller, Get, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, UseInterceptors, Post, Body } from '@nestjs/common';
 import { ThreedPrintersService } from './threed-printers.service';
+import { ThreeDPrinterDTO } from './threed-printers.dto';
 
 @Controller('3dprinters')
 export class ThreedPrintersController {
-    constructor(private service:ThreedPrintersService){}
+  constructor(private service: ThreedPrintersService) {}
 
-    @Get()
-    getAll3DPrinters(){
-        return this.service.getAll3DPrinters();
-    }
+  @Get('all')
+  getAll3DPrinters() {
+    return this.service.getAll3DPrinters();
+  }
+
+  @Post('new')
+  async createPrinter(@Body() printerDTO: ThreeDPrinterDTO): Promise<String> {
+    return this.service.createPrinter(printerDTO);
+  }
 }

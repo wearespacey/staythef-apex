@@ -22,7 +22,7 @@ export const PrinterCards = () => {
       {models.map((model, index) => (
         <PrinterCard
           width={300}
-          height={450}
+          height={400}
           key={index}
           printer={model}
           onClick={() => console.log('You clicked on an item!')}

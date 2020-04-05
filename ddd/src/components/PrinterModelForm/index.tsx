@@ -23,7 +23,7 @@ export const PrinterModelForm = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        price: 1.2,
+        price: 1,
         plastic: 'PLA',
         producerId: 'hXLzwZ35hkj24iZRaPs8',
       }),

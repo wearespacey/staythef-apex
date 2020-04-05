@@ -18,6 +18,7 @@ export const PrinterCard: React.FC<IProps> = ({ printer, width, height, onClick,
         <Card.Img variant='top' src={printerAvatar} />
         <Card.Body>
           <Card.Title>{printer.plastic.toUpperCase()}</Card.Title>
+          <Card.Text>Print price: {printer.price}</Card.Text>
           <Card.Text>Producer code : {printer.producerId}</Card.Text>
         </Card.Body>
         <Button onClick={onClick}>{contentButton}</Button>

@@ -8,7 +8,7 @@ export const PrinterCards = () => {
   const [models, setModels] = useState<IPrinterModel[]>([]);
 
   async function api(){
-    const res = await fetch('https://staythefuckapex-api.azurewebsites.net/api/3dprinters');
+    const res = await fetch('https://staythefuckapex-api.azurewebsites.net/api/3dprinters/all');
     const data: IPrinterModel[] = await res.json();
     setModels(data);
   };

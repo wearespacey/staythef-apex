@@ -4,25 +4,17 @@ import { CardDeck } from "react-bootstrap";
 import { IPrinterModel } from "../../models/IPrinterModel";
 import { PrinterCard } from '../../components/PrinterCard';
 
-const INTIIAL_VALUE: IPrinterModel = {
-  id: "123",
-  plastic: "123",
-  producerId : "",
-};
-
 export const PrinterCards = () => {
   const [models, setModels] = useState<IPrinterModel[]>([]);
 
   async function api(){
     const res = await fetch('https://staythefuckapex-api.azurewebsites.net/api/3dprinters');
-    const data = await res.json();
-    setModels(data as IPrinterModel[]);
+    const data: IPrinterModel[] = await res.json();
+    setModels(data);
   };
 
   useEffect(() => {
     api();
-    return () => {
-    }
   }, []);
 
   return (

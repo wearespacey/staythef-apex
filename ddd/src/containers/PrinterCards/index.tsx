@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CardDeck } from "react-bootstrap";
 
 import { IPrinterModel } from "../../models/IPrinterModel";
@@ -6,16 +6,24 @@ import { PrinterCard } from '../../components/PrinterCard';
 
 const INTIIAL_VALUE: IPrinterModel = {
   id: "123",
-  details: "Marque Imprimante 3D",
+  plastic: "123",
+  producerId : "",
 };
 
 export const PrinterCards = () => {
-    const [models, setModels] = useState<IPrinterModel[]>([
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-    INTIIAL_VALUE,
-  ]);
+  const [models, setModels] = useState<IPrinterModel[]>([]);
+
+  async function api(){
+    const res = await fetch('https://staythefuckapex-api.azurewebsites.net/api/3dprinters');
+    const data = await res.json();
+    setModels(data as IPrinterModel[]);
+  };
+
+  useEffect(() => {
+    api();
+    return () => {
+    }
+  }, []);
 
   return (
     <CardDeck className='m-4'>

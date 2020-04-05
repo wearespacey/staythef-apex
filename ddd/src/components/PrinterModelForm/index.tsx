@@ -6,9 +6,9 @@ export const PrinterModelForm = () => {
     <Form>
       <Form.Group controlId='DesciptionTextField'>
         <Form.Label as='h3' className='title'>
-          Description
+          Plastic type
         </Form.Label>
-        <Form.Control type='text' placeholder='Original Prusa i3 MK3S.' />
+        <Form.Control type='text' placeholder='PETG' />
       </Form.Group>
       <Button variant='primary' type='submit'>
         Add

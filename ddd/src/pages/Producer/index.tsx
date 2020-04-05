@@ -13,7 +13,6 @@ export const Producer = () => {
         </Accordion.Toggle>
         <Accordion.Collapse eventKey='0'>
           <Container>
-            <h2 className='title'>Printer Form</h2>
             <PrinterModelForm />
           </Container>
         </Accordion.Collapse>

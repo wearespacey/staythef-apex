@@ -1,4 +1,6 @@
 export interface IPrinterModel {
     id: string;
-    details: string;
+    plastic: string;
+    producerId: string;
+    price: number;
 }

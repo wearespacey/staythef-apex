@@ -43,7 +43,9 @@
 
 ## About The Project
 
-Due to the global pandemic of COVID-19 in 2020, the Space Office hackathon was cancelled and replaced by an new and fully remote hackathon : the Stay the f\*\*\* at home Hackathon, we decided to work on a webapp gathering owners of 3D printers with creator of 3D models to allow them to share their resources with anyone in need, while sharing the profits with a charity chosen by the buyer.
+Due to the global pandemic of COVID-19 in 2020, the Space Office hackathon was cancelled and replaced by an new and fully remote hackathon : the Stay the f\*\*\* at home Hackathon.
+
+We decided to work on a webapp gathering owners of 3D printers with creator of 3D models to allow them to share their resources with anyone in need, while sharing the profits with a charity chosen by the buyer.
 
 We thus created **Staythef\*\*\*apex**, a React typsescript online shop that shares the sales profit between the creator of the 3D model, the owner of the 3D printer and a charity chosen by the buyer.
 
